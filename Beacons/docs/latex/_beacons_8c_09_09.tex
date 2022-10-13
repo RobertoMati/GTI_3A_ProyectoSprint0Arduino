@@ -1,0 +1,78 @@
+\hypertarget{_beacons_8c_09_09}{}\doxysection{C\+:/xampp/htdocs/\+Proyecto\+Sprint0\+Arduino/\+Beacons.c++ File Reference}
+\label{_beacons_8c_09_09}\index{C:/xampp/htdocs/ProyectoSprint0Arduino/Beacons.c++@{C:/xampp/htdocs/ProyectoSprint0Arduino/Beacons.c++}}
+{\ttfamily \#include $<$bluefruit.\+h$>$}\newline
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_loop}{Loop}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_beacons_8c_09_09_a4fc01d736fe50cf5b977f755b675f11d}{setup}} ()
+\item 
+void \mbox{\hyperlink{_beacons_8c_09_09_aa27c893a9dc986f16f4fb350783db5a4}{Comienzo\+Envio\+Beacons}} ()
+\item 
+void \mbox{\hyperlink{_beacons_8c_09_09_afe461d27b9c48d5921c00d521181f12f}{loop}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{namespace_loop_af2eaf1a62634613bf4d66fa529ac2e90}{Loop\+::cont}} = 0
+\begin{DoxyCompactList}\small\item\em Esta función (loop) se inicia un contador. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_beacons_8c_09_09_aa27c893a9dc986f16f4fb350783db5a4}\label{_beacons_8c_09_09_aa27c893a9dc986f16f4fb350783db5a4}} 
+\index{Beacons.c++@{Beacons.c++}!ComienzoEnvioBeacons@{ComienzoEnvioBeacons}}
+\index{ComienzoEnvioBeacons@{ComienzoEnvioBeacons}!Beacons.c++@{Beacons.c++}}
+\doxysubsubsection{\texorpdfstring{ComienzoEnvioBeacons()}{ComienzoEnvioBeacons()}}
+{\footnotesize\ttfamily void Comienzo\+Envio\+Beacons (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Esta función (Comienzo\+Envio\+Beacons) se encarga de poder enviar el i\+Beacon. La función tiene el siguiente formato\+:
+\begin{DoxyItemize}
+\item Se crea un objeto de tipo BLEBeacon.
+\item Se configura el UUID del i\+Beacon.
+\item Se configura el Major y el Minor.
+\item Se configura el RSSI.
+\item Se configura el intervalo de envío.
+\item Se inicia el envío del i\+Beacon.
+\end{DoxyItemize}
+
+La función tiene el siguiente diseño\+: Comienzo\+Envio\+Beacons -\/-\/---\texorpdfstring{$>$}{>}
+
+Creamos el i\+Beacon. Este consta de 4 partes\+:
+\begin{DoxyEnumerate}
+\item Identificador del i\+Beacon
+\item Major
+\item Minor
+\item Potencia de transmisión (Tx\+Power)
+\end{DoxyEnumerate}
+
+\begin{DoxyVerb} Creación UUID: uint8_t beaconUUID[16] = {'E', 'P', 'S', 'G', '-', 'R', 'O', 'B','E', 'R', 'T', 'O', '-', 'P', 'R', 'O' };
+ BLEBeacon elBeacon( beaconUUID, 12, 33, 73 );
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em beacon\+UUID} & Identificador del i\+Beacon \\
+\hline
+{\em 12} & Major \\
+\hline
+{\em 33} & Minor \\
+\hline
+{\em 73} & Potencia de transmisión (Tx\+Power)\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_beacons_8c_09_09_afe461d27b9c48d5921c00d521181f12f}\label{_beacons_8c_09_09_afe461d27b9c48d5921c00d521181f12f}} 
+\index{Beacons.c++@{Beacons.c++}!loop@{loop}}
+\index{loop@{loop}!Beacons.c++@{Beacons.c++}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily void loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Esta función (loop) se encarga contar las veces que se ha producido la transmisión del i\+Beacon.\mbox{\Hypertarget{_beacons_8c_09_09_a4fc01d736fe50cf5b977f755b675f11d}\label{_beacons_8c_09_09_a4fc01d736fe50cf5b977f755b675f11d}} 
+\index{Beacons.c++@{Beacons.c++}!setup@{setup}}
+\index{setup@{setup}!Beacons.c++@{Beacons.c++}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily void setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Esta función (setup) se encarga de poder inicializar el dispositivo y el envío de beacons.
