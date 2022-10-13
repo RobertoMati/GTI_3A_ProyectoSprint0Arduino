@@ -12,7 +12,9 @@ Para poder modificar los archivos descargados de este repositorio, lo más conve
 Para poder configurar este repositorio, unirlo con los demás repositorios y que funcione correctamente, se deberán seguir los siguientes pasos:
 
 * En primer jugar, necesitamos incluir el archivo Beacons.ino en una carpeta con nombre Beacons.
+* Seguidamente, debemos instalar las librerías "SparkFun Pro nRF52840 Mini" en el editor de código fuente.
 * Una vez hecho, debemos conectar la Sparkfun al ordenador, y con el programa editor de código, verificarlo y subirlo al dispositivo.
+* En este momento el dispositivo ya estaría enviando beacons, y sería posible verlos con la aplicación del repositorio ProyectoAppSprint0 o instalándo en el teléfono la app llamada nrfConnect, que mostrará el dispositivo.
 
 # Comentarios extra
 El código está configurado con datos propios, es decir, la UUID del dispositivo, el nombre y los datos del major y el minor son editables. 
